@@ -34,13 +34,20 @@ backup_agent() {
     # Chercher et copier tous les fichiers .md
     local md_files_found=0
     
-    # Copier UNIQUEMENT les fichiers .md du répertoire racine de l'agent (pas les sous-dossiers)
+    # Copier UNIQUEMENT les fichiers .md en MAJUSCULES du répertoire racine de l'agent
     find "$workspace_path" -maxdepth 1 -name "*.md" -type f 2>/dev/null | while read -r md_file; do
         if [ -f "$md_file" ]; then
             local filename=$(basename "$md_file")
-            cp "$md_file" "$agent_dir/"
-            echo "  ✅ Copié: $filename"
-            md_files_found=$((md_files_found + 1))
+            local basename_no_ext="${filename%.*}"
+            
+            # Vérifier si le nom (sans extension) est entièrement en majuscules
+            if [ "$basename_no_ext" = "$(echo "$basename_no_ext" | tr '[:lower:]' '[:upper:]')" ] && [ "$basename_no_ext" != "" ]; then
+                cp "$md_file" "$agent_dir/"
+                echo "  ✅ Copié: $filename"
+                md_files_found=$((md_files_found + 1))
+            else
+                echo "  ⏭️ Ignoré: $filename (pas en majuscules)"
+            fi
         fi
     done
     
