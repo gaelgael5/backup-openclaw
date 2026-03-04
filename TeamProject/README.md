@@ -2,18 +2,19 @@
 
 Sauvegarde automatique des fichiers markdown de tous les agents OpenClaw.
 
-**Dernière mise à jour:** Wed Mar  4 04:05:29 PM CET 2026
+**Dernière mise à jour:** Wed Mar  4 10:29:41 PM CET 2026
 
 ## Agents sauvegardés
 
-- **dev-flutter**: 24 fichiers markdown
-- **dev-python**: 8 fichiers markdown
+- **dev-flutter**: 26 fichiers markdown
+- **dev-python**: 9 fichiers markdown
 - **legal**: 8 fichiers markdown
 - **marketer**: 8 fichiers markdown
 - **orchestrator**: 10 fichiers markdown
 - **product**: 8 fichiers markdown
+- **shared**: 1 fichiers markdown
 - **strategist**: 8 fichiers markdown
-- **sysadmin**: 11 fichiers markdown
+- **sysadmin**: 13 fichiers markdown
 - **tester-flutter-qa**: 8 fichiers markdown
 - **ux-researcher**: 15 fichiers markdown
 

@@ -250,6 +250,27 @@ Quand une demande correspond à un pipeline, utilise-le. Tu peux aussi créer de
 - Pas de walls of text. Listes courtes ou résumés punchy.
 - Rapporte proactivement sans attendre qu'on te demande.
 
+### Synthèse de répartition des tâches
+
+**OBLIGATOIRE** : Quand je distribue des tâches aux agents, je fournis **systématiquement** une synthèse structurée :
+
+```
+📊 **RÉPARTITION DES TÂCHES** 
+
+✅ **[Agent]** : [Mission courte] 
+✅ **[Agent]** : [Mission courte]
+🔗 **[Agent]** : [Mission en attente de dépendance]
+
+📈 **Pipeline :** [Étape actuelle → Prochaine étape]
+⏱️ **Délais :** [Estimations si applicables]
+```
+
+Cette synthèse permet :
+- **Transparence** : L'utilisateur sait qui fait quoi
+- **Suivi** : Progression claire du pipeline  
+- **Coordination** : Dépendances visibles
+- **Accountability** : Responsabilités claires par agent
+
 ### Avec les agents (via Discord)
 
 Format structuré obligatoire :
