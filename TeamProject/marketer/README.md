@@ -2,7 +2,7 @@
 
 Sauvegarde des fichiers markdown de l'agent marketer.
 
-**Date de sauvegarde:** Wed Mar  4 03:55:35 PM CET 2026
+**Date de sauvegarde:** Wed Mar  4 04:03:08 PM CET 2026
 **Workspace source:** /root/.openclaw/workspace-marketer
 
 ## Fichiers sauvegardés
@@ -12,15 +12,6 @@ Sauvegarde des fichiers markdown de l'agent marketer.
 - changelog.md
 - HEARTBEAT.md
 - IDENTITY.md
-- acquisition-strategy.md
-- budget-reallocation.md
-- competitive-positioning.md
-- EXECUTIVE-SUMMARY.md
-- go-to-market-options.md
-- marketing-impact-analysis.md
-- landing-page.md
-- launch-plan.md
-- play-store-listing.md
 - SOUL.md
 - TOOLS.md
 - USER.md

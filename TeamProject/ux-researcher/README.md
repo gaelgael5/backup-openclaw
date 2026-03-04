@@ -2,7 +2,7 @@
 
 Sauvegarde des fichiers markdown de l'agent ux-researcher.
 
-**Date de sauvegarde:** Wed Mar  4 03:55:37 PM CET 2026
+**Date de sauvegarde:** Wed Mar  4 04:03:08 PM CET 2026
 **Workspace source:** /root/.openclaw/workspace-ux-researcher
 
 ## Fichiers sauvegardés
@@ -18,7 +18,6 @@ Sauvegarde des fichiers markdown de l'agent ux-researcher.
 - LIVRAISON-MOCKUPS-PNG.md
 - LIVRAISON-PNG-VARIATIONS-CORRIGEES.md
 - LIVRAISON-VARIATIONS-LOGIN.md
-- LIVRABLE-CLIENT-SOBRE-V2.md
 - MISSION-ORANGE-FLASHY-COMPLETE.md
 - orange-flashy-analysis.md
 - orange-flashy-deliverables.md
@@ -31,12 +30,3 @@ Sauvegarde des fichiers markdown de l'agent ux-researcher.
 - user-flows-v3.md
 - USER.md
 - ux-architecture-v3.md
-- advanced-screens.md
-- booking-flow-design.md
-- mobile-ux-guidelines.md
-- DASHBOARD_CLIENT_LIGHT_DYNAMIC.md
-- DASHBOARD_COACH_DARK_TECH.md
-- DESIGN_SYSTEM_2026.md
-- MICRO_ANIMATIONS_CONCEPTS.md
-- ONBOARDING_ULTRA_MODERNE.md
-- SHOWCASE_VISUEL.md

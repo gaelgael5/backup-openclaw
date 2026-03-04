@@ -34,30 +34,13 @@ backup_agent() {
     # Chercher et copier tous les fichiers .md
     local md_files_found=0
     
-    # Copier les fichiers .md du répertoire racine de l'agent
+    # Copier UNIQUEMENT les fichiers .md du répertoire racine de l'agent (pas les sous-dossiers)
     find "$workspace_path" -maxdepth 1 -name "*.md" -type f 2>/dev/null | while read -r md_file; do
         if [ -f "$md_file" ]; then
             local filename=$(basename "$md_file")
             cp "$md_file" "$agent_dir/"
             echo "  ✅ Copié: $filename"
             md_files_found=$((md_files_found + 1))
-        fi
-    done
-    
-    # Chercher récursivement dans les sous-dossiers aussi
-    find "$workspace_path" -name "*.md" -type f 2>/dev/null | while read -r md_file; do
-        if [ -f "$md_file" ]; then
-            # Créer la structure de dossier si nécessaire
-            local rel_path=$(realpath --relative-to="$workspace_path" "$md_file")
-            local dest_dir="$agent_dir/$(dirname "$rel_path")"
-            
-            # Éviter la duplication des fichiers racine déjà copiés
-            if [ "$(dirname "$rel_path")" != "." ]; then
-                mkdir -p "$dest_dir"
-                cp "$md_file" "$dest_dir/"
-                echo "  ✅ Copié: $rel_path"
-                md_files_found=$((md_files_found + 1))
-            fi
         fi
     done
     
