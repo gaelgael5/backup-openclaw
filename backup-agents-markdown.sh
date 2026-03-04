@@ -89,11 +89,9 @@ for workspace in /root/.openclaw/workspace-*; do
     if [ -d "$workspace" ]; then
         agent_name=$(basename "$workspace" | sed 's/workspace-//')
         
-        # Éviter le workspace orchestrator (c'est nous)
-        if [ "$agent_name" != "orchestrator" ]; then
-            backup_agent "$agent_name" "$workspace"
-            echo ""
-        fi
+        # Inclure TOUS les agents y compris orchestrator
+        backup_agent "$agent_name" "$workspace"
+        echo ""
     fi
 done
 

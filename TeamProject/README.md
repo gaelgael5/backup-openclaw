@@ -2,7 +2,7 @@
 
 Sauvegarde automatique des fichiers markdown de tous les agents OpenClaw.
 
-**Dernière mise à jour:** Wed Mar  4 03:55:38 PM CET 2026
+**Dernière mise à jour:** Wed Mar  4 04:01:42 PM CET 2026
 
 ## Agents sauvegardés
 
@@ -10,6 +10,7 @@ Sauvegarde automatique des fichiers markdown de tous les agents OpenClaw.
 - **dev-python**: 78 fichiers markdown
 - **legal**: 12 fichiers markdown
 - **marketer**: 18 fichiers markdown
+- **orchestrator**: 1262 fichiers markdown
 - **product**: 12 fichiers markdown
 - **strategist**: 12 fichiers markdown
 - **sysadmin**: 341 fichiers markdown
