@@ -6,6 +6,12 @@ Ce repository contient les sauvegardes automatisées des configurations et fichi
 
 Ce projet sert à **préserver et synchroniser** les configurations des agents OpenClaw entre différents environnements. Il sauvegarde automatiquement :
 
+Comment automatiser la sauvegarde.
+```
+Tout les jours à minuit : descend le repository github "https://github.com/gaelgael5/backup-openclaw/tree/main", execute le fichier "backup-agents-markdown.sh" à la racine et commit les changements.
+```
+
+
 - ✅ **Configurations agents** (SOUL.md, AGENTS.md, IDENTITY.md, etc.)
 - ✅ **Profils experts** et paramètres comportementaux
 - ✅ **Documentation projet** (livrables, rapports, guides)
