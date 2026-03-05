@@ -101,6 +101,16 @@ Dernière sauvegarde : **2026-03-04 22:29**
 - **114 fichiers markdown** collectés  
 - **Configuration complète** préservée
 
+## 🔄 Mise à jour du serveur OpenClaw
+
+Pour appliquer les configurations de ce repo sur le serveur OpenClaw :
+
+```bash
+bash -c "$(wget -qLO - https://raw.githubusercontent.com/gaelgael5/backup-openclaw/refs/heads/main/update.sh)"
+```
+
+> **Attention** : Le script demande confirmation que le serveur a été sauvegardé avant de procéder.
+
 ## 🛠️ Maintenance
 
 ### Exécution Périodique
