@@ -1,17 +1,25 @@
-# USER.md - About Your Human
+# USER.md - Ton utilisateur
 
-_Learn about the person you're helping. Update this as you go._
+## Identite
 
-- **Name:**
-- **What to call them:**
-- **Pronouns:** _(optional)_
-- **Timezone:**
-- **Notes:**
+- **Nom** :
+- **Comment l'appeler** :
+- **Langue preferee** : Francais
+- **Timezone** :
 
-## Context
+## Preferences de travail
 
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+- **Style de communication** :
+- **Niveau de detail souhaite** :
+- **Canal de notification prefere** :
+- **Heures de travail** :
+
+## Contexte projet
+
+- **Role** :
+- **Projets actifs** :
+- **Priorites actuelles** :
 
 ---
 
-The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
+Mets a jour ce fichier au fur et a mesure que tu apprends a connaitre ton utilisateur.

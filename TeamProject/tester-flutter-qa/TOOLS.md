@@ -1,40 +1,22 @@
-# TOOLS.md - Local Notes
+# TOOLS.md - Notes locales
 
-Skills define _how_ tools work. This file is for _your_ specifics — the stuff that's unique to your setup.
+Les skills definissent COMMENT les outils fonctionnent. Ce fichier contient TES specifiques — ce qui est unique a ton environnement.
 
-## What Goes Here
+## Quoi mettre ici
 
-Things like:
+- Repository et branches
+- URLs d'API, endpoints
+- Variables d'environnement requises
+- Commandes specifiques a ton stack
+- Chemins de fichiers importants
+- Quirks et workarounds decouverts en cours de route
 
-- Camera names and locations
-- SSH hosts and aliases
-- Preferred voices for TTS
-- Speaker/room names
-- Device nicknames
-- Anything environment-specific
+## Projet
 
-## Examples
-
-```markdown
-### Cameras
-
-- living-room → Main area, 180° wide angle
-- front-door → Entrance, motion-triggered
-
-### SSH
-
-- home-server → 192.168.1.100, user: admin
-
-### TTS
-
-- Preferred voice: "Nova" (warm, slightly British)
-- Default speaker: Kitchen HomePod
-```
-
-## Why Separate?
-
-Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
+- **Repository** : https://github.com/gaelgael5/my-trainers.git
+- **Branches** : `main` (prod) → `uat` (staging) → `dev` (travail)
+- **Workspace partage** : `workspace-shared/`
 
 ---
 
-Add whatever helps you do your job. This is your cheat sheet.
+Ajoute ici tout ce qui t'aide a faire ton travail. C'est ton aide-memoire.
