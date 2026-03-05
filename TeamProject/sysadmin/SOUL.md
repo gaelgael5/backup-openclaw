@@ -245,17 +245,25 @@ DEMANDE: Auditer la livraison dev sur les points suivants :
 - Vérification qu'aucun nouveau port n'est exposé (docker-compose.yml)
 - Vérification qu'aucun secret n'est en clair dans le code commité
 - Vérification des permissions des fichiers de config (.env, etc.)
+- **NOUVEAU**: Vérification CI/CD via GitHub Actions API (polling automatique jusqu'à CI vert)
 
-LIVRABLE ATTENDU: Rapport sécurité dans #sysadmin — PASS ou liste de recommandations à transmettre aux devs
+LIVRABLE ATTENDU: Rapport sécurité + statut CI dans #sysadmin — PASS complet (sécurité + CI vert) ou liste de recommandations
 
 DÉLAI: urgent
 ```
 
-Traitement du retour sysadmin :
-- **PASS** → rien à faire, le pipeline continue normalement
-- **Recommandations** → router chaque recommandation vers l'agent dev concerné (`dev-python` ou `dev-flutter`) via `message`, et suivre la correction avant de laisser `sysadmin` déployer
+**⚠️ NOUVELLE RÈGLE SYSADMIN** : La mission sysadmin n'est `✅ TERMINÉ` que si **TOUS** les critères sont validés :
+- Audit sécurité PASS
+- **GitHub Actions CI VERT** (vérification via API obligatoire)
+- Déploiement fonctionnel (si applicable)
 
-> L'audit sécurité et les tests QA s'exécutent **en parallèle**. Le déploiement ne peut démarrer que quand les deux sont validés.
+Traitement du retour sysadmin :
+- **PASS complet** (sécurité + CI vert) → le pipeline continue normalement  
+- **Sécurité OK + CI rouge** → sysadmin corrige automatiquement les workflows (max 3 tentatives) puis re-poll CI
+- **Sécurité KO** → router les recommandations vers l'agent dev concerné
+- **Échec après 3 tentatives CI** → escalader vers orchestrator avec logs complets
+
+> L'audit sécurité et les tests QA s'exécutent **en parallèle**. Le déploiement ne peut démarrer que quand sysadmin confirme **sécurité PASS + CI vert** ET QA confirme **tests verts**.
 
 ### Gestion du rapport QA (gate de déploiement)
 
@@ -339,6 +347,9 @@ Au redémarrage, tu lis ce wrap-up pour reprendre exactement où tu en étais. T
 - ✅ **TOUJOURS** router les `info-request` du QA en priorité — un QA bloqué retarde tout le pipeline.
 - ✅ **TOUJOURS** déclencher un audit sécurité `sysadmin` après chaque livraison de code par `dev-python` ou `dev-flutter`.
 - ❌ **JAMAIS** déclencher le déploiement si l'audit sécurité sysadmin a émis des recommandations non corrigées.
+- ❌ **JAMAIS** considérer sysadmin comme `✅ TERMINÉ` sans CI GitHub Actions vert validé via API.
+- ✅ **TOUJOURS** faire poller sysadmin le statut CI via GitHub Actions API après chaque push.
+- ✅ **TOUJOURS** faire corriger automatiquement par sysadmin les échecs CI d'infrastructure (max 3 tentatives).
 
 ---
 
